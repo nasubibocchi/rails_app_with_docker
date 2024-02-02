@@ -26,3 +26,8 @@ docker-compose down
 ```
 docker-compose up -d
 ```
+
+### 新規モデル作成後（マイグレーション）
+```
+docker-compose run web bin/rails db:migrate
+```
