@@ -14,7 +14,7 @@ docker-compose up -d
 
 3. DBの作成
 ```
-docker-compose run --rm web bin/rails db:create db:migrate
+docker-compose run --rm web bin/rails db:create
 ```
 
 ### アプリの停止
