@@ -22,6 +22,16 @@ docker-compose run --rm web bin/rails db:create db:migrate
 docker-compose down
 ```
 
+#### 一時停止
+```
+docker-compose stop
+```
+
+#### 再開
+```
+docker-compose start
+```
+
 ### アプリの再起動
 ```
 docker-compose up -d
