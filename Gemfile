@@ -12,7 +12,10 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'annotate', '~> 3.2'
 
+# for secure password
+gem 'bcrypt', '~> 3.1', '>= 3.1.20'
 # style-sheet
 gem 'sass-rails', "~>6.0.0"
 # for using javascript
