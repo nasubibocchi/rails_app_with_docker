@@ -26,4 +26,7 @@ class User < ApplicationRecord
                     # DBレベルでのユニーク制約はindex追加（add_index_to_users_email）で定義する必要がある
 
   has_secure_password
+  # has_secure_password　で存在性のチェックは可能だが、初回レコード作成時のみのため
+  # 更新時の存在性を担保するためpresenceバリデーションを定義する必要がある
+  validates :password, presence: true, length: { minimum: 6 }
 end
