@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
+                    # DBレベルでのユニーク制約はindex追加（add_index_to_users_email）で定義する必要がある
 end
