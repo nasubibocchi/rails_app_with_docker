@@ -11,6 +11,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 # style-sheet
 gem 'sass-rails', "~>6.0.0"
