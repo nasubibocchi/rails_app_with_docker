@@ -3,6 +3,8 @@
 
 /* universal */
 
+$gray-medium-light: #eaeaea;
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -69,28 +71,27 @@ textarea {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
 
-footer a {
-  color: #555;
-}
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
 
-footer a:hover {
-  color: #222;
-}
+  small {
+    float: left;
+  }
 
-footer small {
-  float: left;
-}
+  ul {
+    float: right;
+    list-style: none;
 
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
 }
