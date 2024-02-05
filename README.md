@@ -26,3 +26,8 @@ docker-compose down
 ```
 docker-compose up -d
 ```
+
+### 秘匿情報の追加・編集
+```
+docker-compose run --rm -e EDITOR=vim web rails credentials:edit
+```

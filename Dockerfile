@@ -1,6 +1,7 @@
 # syntax = docker/dockerfile:1
 FROM ruby:3.0.0
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN apt-get install -y vim
 WORKDIR /my_app_0202
 COPY Gemfile /my_app_0202/Gemfile
 COPY Gemfile.lock /my_app_0202/Gemfile.lock
