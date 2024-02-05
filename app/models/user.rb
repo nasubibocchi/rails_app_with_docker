@@ -29,4 +29,11 @@ class User < ApplicationRecord
   # has_secure_password　で存在性のチェックは可能だが、初回レコード作成時のみのため
   # 更新時の存在性を担保するためpresenceバリデーションを定義する必要がある
   validates :password, presence: true, length: { minimum: 6 }
+
+  #  class method to create digest password
+  def User.digest(string)
+    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                  BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+  end
 end
