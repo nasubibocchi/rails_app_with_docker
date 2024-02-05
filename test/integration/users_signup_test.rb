@@ -16,8 +16,19 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                          password:              "foo",
                                          password_confirmation: "bar" } }
     end
-    # users/new ページに移動することを確認
+    # users/new ページにとどまることを確認
     assert_template 'users/new'
+
+    assert_difference 'User.count', 1 do
+      post users_path, params: { user: { name:  "Example User",
+                                 email: "user@example.com",
+                                 password:              "password",
+                                 password_confirmation: "password" } }
+    end
+    follow_redirect!
+    # users/show ページに移動することを確認
+    assert_template 'users/show'
+    assert_not flash.empty?
   end
 
   test 'invalid name' do
